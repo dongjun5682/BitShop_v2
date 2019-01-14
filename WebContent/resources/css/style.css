@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+/* view */
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    border: 3px solid gray;
+}
+
+#wrapper tr {
+    border: 1px solid gray;
+}
+
+#wrapper tr td {
+    border: 1px solid gray;
+    text-align: center;
+}
+#navi-bar ul{
+    list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ border: 1px solid #e7e7e7;
+ background-color: #f3f3f3;
+}
+#navi-bar li {
+ float: left;
+}
+
+#navi-bar li a {
+ display: block;
+ color: #666;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+
+li a:hover{
+ background-color: #ddd;
+}
+#side-menu{
+    height:300px;
+}
+/* index */
+
+.container{
+    text-align: center;
+}
+fieldset{
+    text-align: center;
+    width:300px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
