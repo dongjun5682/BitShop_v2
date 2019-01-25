@@ -2,6 +2,6 @@
     pageEncoding="UTF-8"%>
 <div id="side-menu">
 
-home
+side-bar
 
 </div>

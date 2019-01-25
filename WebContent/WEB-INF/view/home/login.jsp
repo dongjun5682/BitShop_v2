@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 	<h2>회원 전용 시스템</h2>
-			<form action="member.do">
+			<form id="login-form">
 			<fieldset>
 			<legend>MEMBER LOGIN </legend>
 			<input type="text" name="uid" placeholder="ID"/><br />
@@ -21,26 +21,42 @@
 			 <input type="hidden" name="cmd" value="login" />
 			 <input type="hidden" name="dir" value="home" />
 			 <input type="hidden" name="dest" value="welcome" />
-				
-			 	<div style="margin:5px;"></div>
-			 <input type="submit" id="btn" value="LOGIN" />
+			 
+			 <button id="btn">LOGIN</button>
+		<!-- 	 <input type="submit" id="btn" value="LOGIN" /> -->
 			</fieldset>
 				<a id ="admin-link" href="#">관리자</a>
 				<a id ="join-link" href="#">회원가입</a>
 		</form>
-		<button onclick="move()"> 테스트</button>
 	</div>
 
 	<script>
+	var submit = document.getElementById("btn");
+	submit.addEventListener('click',function(){
+		var id = document.getElementById("uid");
+		var pass = document.getElementById("upass");
+		
+		if(id.value==="" && pass.value===""){
+			alert('아이디랑 비밀번호를 입력해주세요.');
+		}else{
+			var form = document.getElementById("login-form");
+			alert('아이디있어요');
+			form.action = "member.do";
+			form.method = "post";
+			form.submit();
+		}
+		
+			
+	});
+	
 /* 	location.assign('member.do?dest=join-form'); */
 	/* window.onload = function(){
 		
 	} */
-	/* 	document.getElementById('join-link')
+	document.getElementById('join-link')
 		.addEventListener('click', function(){
-			alert('회원가입 클릭!!');
 			location.assign('member.do?dest=join-form');
-		}); */
+		});
 		//click 이벤트
 		//move 이면 클릭이벤트가 리스닝되고
 		//move() 이면 즉시 실행
